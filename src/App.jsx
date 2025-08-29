@@ -50,6 +50,21 @@ function App() {
       
       console.log("Search Input: " + searchInput);
       console.log("Artist ID: " + artistID);
+
+
+      // Get Artist Albums
+      await fetch(
+        "https://api.spotify.com/v1/artists/" +
+        artistID +
+        "/albums?inclde_groups=album&market=US&limit=50",
+        artistParams
+      )
+        .then((result) => result.json())
+        .then((data) => {
+          setAlbums(data.items);
+        });
+
+        console.log("Albums: " + albums);
   }
 
   return (
