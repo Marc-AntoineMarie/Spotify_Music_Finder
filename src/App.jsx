@@ -147,6 +147,8 @@ function App() {
                   </Card.Text>
                   <Button
                     href={album.external_urls.spotify}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       backgroundColor: "black",
                       color: "white",
